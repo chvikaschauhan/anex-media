@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f8fafc;
+  background: #0a0a0c;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+a { text-decoration: none; }
+::selection { color: white; background: rgb(124 58 237 / 65%); }
+
+.whatsapp-float {
+  animation: whatsapp-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes whatsapp-glow {
+  0%, 100% { box-shadow: 0 0 18px rgba(37, 211, 102, 0.38), 0 0 0 0 rgba(37, 211, 102, 0.28); }
+  50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.65), 0 0 0 9px rgba(37, 211, 102, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { animation: none; }
+}
